@@ -23,6 +23,7 @@ public class Swea1926 {
 
                     }else{
                         str=n+str;
+
                     }
                     j=j/10;
                 }
