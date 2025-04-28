@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Swea2001 {
 }
@@ -10,6 +11,8 @@ class Solution
         Scanner sc = new Scanner(System.in);
         int T;
         T = sc.nextInt();
+
+
 
         for (int test_case = 1; test_case <= T; test_case++)
         {
