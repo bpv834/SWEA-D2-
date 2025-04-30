@@ -12,6 +12,8 @@ class Solution
         int T;
         T=sc.nextInt();
 
+
+
         for(int test_case = 1; test_case <= T; test_case++)
         {
             int n = sc.nextInt();
