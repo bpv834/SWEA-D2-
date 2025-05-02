@@ -74,3 +74,54 @@ class Solution
         }
     }
 }
+
+// 우,하,좌,상 으로 회전하면서 달팽이 만들기
+class Solution2
+{
+    public static void main(String args[]) throws Exception
+    {
+
+        Scanner sc = new Scanner(System.in);
+        int T;
+        T=sc.nextInt();
+        int[] dy = new int[]{0,1,0,-1};
+        int[] dx = new int[]{1,0,-1,0};
+
+        for(int test_case = 1; test_case <= T; test_case++)
+        {
+            int n = sc.nextInt();
+
+            int[][] snail = new int[n][n];
+            int dir = 0;
+            int y = 0;
+            int x = 0;
+            for(int i=1; i<=n*n; i++){
+                snail[y][x] = i;
+
+
+                int ny = y+dy[dir];
+                int nx = x+dx[dir];
+
+                if(ny>=0 && ny<n && nx >= 0 && nx <n && snail[ny][nx] ==0){
+                    y=ny;
+                    x=nx;
+                    //   System.out.println("y="+y+" x= "+x);
+
+                }else{
+                    dir = (1+dir)%4;
+                    y= y+dy[dir];
+                    x= x+dx[dir];
+                    //    System.out.println("y="+y+" x= "+x);
+                }
+
+            }
+            System.out.println("#"+test_case);
+            for(int q=0; q<n;q++){
+                for(int w=0; w<n; w++){
+                    System.out.print(snail[q][w]+" ");
+                }
+                System.out.println();
+            }
+        }
+    }
+}
