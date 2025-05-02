@@ -8,6 +8,7 @@ class Solution
     public static void main(String args[]) throws Exception
     {
 
+        // 달력계산
         Scanner sc = new Scanner(System.in);
         int T;
         T=sc.nextInt();
